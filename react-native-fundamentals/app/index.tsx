@@ -7,6 +7,8 @@ export default function Page() {
     <View style={styles.container}>
       <ViewComponent />
       <Link href="/home">Home</Link>
+      <Link href="/register">Register Page</Link>
+      <Link href="/login">Login Page</Link>
     </View>
   );
 }
