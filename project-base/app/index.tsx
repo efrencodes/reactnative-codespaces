@@ -1,11 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import { View, TextField, Text, Button } from "react-native-ui-lib";
+import { useBookStore } from "store/bookStore";
 
 export default function App() {
+  const amont = useBookStore((state) => state.amount);
   return (
     <View flex paddingH-25 paddingT-120>
       <Text blue50 text20>
-        Welcome
+        Books: {amont}
       </Text>
       <TextField text50 placeholder="username" grey10 />
       <TextField text50 placeholder="password" secureTextEntry grey10 />

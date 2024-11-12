@@ -5,7 +5,7 @@
     "baseUrl": ".",
     "paths": {
       "@/pages": ["app/*"],
-      "@/components": ["components/*"],
+      "@/components": ["components/*"]
     }
   }
 }
