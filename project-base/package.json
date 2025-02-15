@@ -8,7 +8,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "lint": "eslint .",
-    "format": "prettier --write '{*.tsx,app/**/*.{tsx}}'"
+    "format": "prettier --write '{app,store}/**/*.{ts,tsx}'"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.66.0",
