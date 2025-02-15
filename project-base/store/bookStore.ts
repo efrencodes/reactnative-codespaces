@@ -1,9 +1,9 @@
-import { create } from "zustand";
+import { create } from 'zustand'
 
 interface IBook {
-  amount: number;
+	amount: number
 }
 
 export const useBookStore = create<IBook>(() => ({
-  amount: 40,
-}));
+	amount: 40,
+}))
