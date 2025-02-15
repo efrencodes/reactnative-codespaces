@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View } from 'react-native'
 
-export default function App() {
+export default function Tab() {
 	return (
 		<View style={styles.container}>
-			<Text>About</Text>
+			<Text>Servicios</Text>
 		</View>
 	)
 }
