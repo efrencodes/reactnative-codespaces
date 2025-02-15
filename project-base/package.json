@@ -11,6 +11,7 @@
     "format": "prettier --write '{*.tsx,app/**/*.{tsx}}'"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.66.0",
     "expo": "~51.0.39",
     "expo-constants": "~16.0.2",
     "expo-linking": "~6.3.1",
@@ -29,6 +30,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
+    "@tanstack/eslint-plugin-query": "^5.66.1",
     "@types/react": "~18.2.45",
     "eslint": "^8.57.0",
     "eslint-config-expo": "~7.1.2",
