@@ -36,7 +36,7 @@ const PageVerifyPhone = () => {
 
   const verifySignIn = () => {
     setisSignedIn(true)
-    router.push({ pathname: "/" });
+    router.push('/home');
   };
 
   return (
