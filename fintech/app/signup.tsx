@@ -1,6 +1,6 @@
 import Colors from '@/constants/Colors';
 import { defaultStyles } from '@/constants/Styles';
-import { Link } from 'expo-router';
+import { Link, useRouter } from 'expo-router';
 import { useState } from 'react';
 import {
   View,
@@ -15,8 +15,11 @@ const Page = () => {
   const [countryCode, setCountryCode] = useState('+49');
   const [phoneNumber, setPhoneNumber] = useState('');
   const keyboardVerticalOffset = Platform.OS === 'ios' ? 80 : 0;
+  const router = useRouter();
 
   const onSignup = async () => {
+    const fullPhoneNumber = countryCode + phoneNumber;
+    router.push({ pathname: '/verify/[phone]', params: { phone: fullPhoneNumber, signin: 'true' } });
   };
 
   return (

@@ -8,6 +8,7 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
+import useAuth from "@/hooks/useAuth";
 import "react-native-reanimated";
 
 export {
@@ -24,6 +25,8 @@ const InitialLayout = () => {
     ...FontAwesome.font,
   });
   const router = useRouter();
+  const { isSignedIn } = useAuth();
+  console.log('isSignedIn => ', isSignedIn)
 
   // Expo Router uses Error Boundaries to catch errors in the navigation tree.
   useEffect(() => {
@@ -35,6 +38,15 @@ const InitialLayout = () => {
       SplashScreen.hideAsync();
     }
   }, [loaded]);
+
+
+  useEffect(() => {
+    if (isSignedIn) {
+      // router.replace('/(authenticated)/(tabs)/home');
+    } else if (!isSignedIn) {
+      // router.replace('/');
+    }
+  }, [isSignedIn]);
 
   if (!loaded) {
     return null;
@@ -88,6 +100,21 @@ const InitialLayout = () => {
       <Stack.Screen
         name="help"
         options={{ title: "Help", presentation: "modal" }}
+      />
+
+      <Stack.Screen
+        name="verify/[phone]"
+        options={{
+          title: "",
+          headerBackTitle: "",
+          headerShadowVisible: false,
+          headerStyle: { backgroundColor: Colors.background },
+          headerLeft: () => (
+            <TouchableOpacity onPress={router.back}>
+              <Ionicons name="arrow-back" size={34} color={Colors.dark} />
+            </TouchableOpacity>
+          ),
+        }}
       />
     </Stack>
   );
