@@ -10,3 +10,8 @@ npx expo install expo-dev-client react-native-reanimated react-native-gesture-ha
 ### Run prebuild (always)
 
 npx expo prebuild
+
+### Install expo-av and expo-asset
+
+npx expo install expo-av expo-asset
+
