@@ -1,3 +1,6 @@
+> https://www.youtube.com/watch?v=iDZBeIgcixk
+
+> https://github.com/Galaxies-dev/fintech-clone-react-native
 
 ### Create a new project
 
