@@ -40,18 +40,14 @@ const InitialLayout = () => {
   }, [loaded]);
 
 
-  useEffect(() => {
-    const inAuthGroup = segments[0] === '(authenticated)';
-
-    console.log(isSignedIn)
-
-    if (!isSignedIn && !inAuthGroup) {
-      router.replace('/(authenticated)/(tabs)/home');
-    }
-    // else if (!isSignedIn) {
-    //   router.replace('/');
-    // }
-  }, [isSignedIn]);
+  // useEffect(() => {
+  //   const inAuthGroup = segments[0] === '(authenticated)';
+  //   if (!isSignedIn && !inAuthGroup) {
+  //     router.replace('/(authenticated)/(tabs)/home');
+  //   } else if (!isSignedIn) {
+  //     router.replace('/');
+  //   }
+  // }, [isSignedIn]);
 
   if (!loaded) {
     return (
