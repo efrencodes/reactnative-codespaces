@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import { View, Text, Button, TextField } from 'react-native-ui-lib'
+import React from 'react'
+import { View, Text, Button } from 'react-native-ui-lib'
+import CodeInput from '../components/CodeInput'
 import { router } from 'expo-router'
 
 export default function Login() {
@@ -7,7 +8,7 @@ export default function Login() {
 		<View flex paddingH-25 paddingT-120>
 			<View marginT-100 center>
 				<Text>Ingresa tu numero celular, te enviaremos un codigo de verificación</Text>
-				<TextField keyboardType="phone-pad" placeholder="(123) 456-7890" maxLength={10} />
+				<CodeInput />
 				<Button
 					text70
 					white
