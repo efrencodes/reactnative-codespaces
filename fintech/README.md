@@ -15,3 +15,6 @@ npx expo prebuild
 
 npx expo install expo-av expo-asset
 
+### Install react-native-confirmation-code-field
+
+yarn add react-native-confirmation-code-field
