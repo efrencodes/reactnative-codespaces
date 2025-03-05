@@ -35,3 +35,10 @@ yarn add zustand
 npx expo install react-native-mmkv
 npx expo prebuild
 
+### Background timer
+
+> https://aloukissas.medium.com/how-to-build-a-background-timer-in-expo-react-native-without-ejecting-ea7d67478408
+
+### Install Expo LocalAuthentication
+
+npx expo install expo-local-authentication

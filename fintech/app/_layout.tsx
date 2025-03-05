@@ -9,6 +9,7 @@ import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
 import useAuth from "@/hooks/useAuth";
+import { UserInactivityProvider } from "@/context/UserInactivity";
 import "react-native-reanimated";
 
 export {
@@ -147,16 +148,23 @@ const InitialLayout = () => {
           ),
         }}
       />
+
+      <Stack.Screen
+        name="(authenticated)/(modals)/lock"
+        options={{ headerShown: false, animation: 'none' }}
+      />
     </Stack>
   );
 };
 
 const RootLayoutNav = () => {
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
-      <StatusBar style="light" />
-      <InitialLayout />
-    </GestureHandlerRootView>
+    <UserInactivityProvider>
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        <StatusBar style="light" />
+        <InitialLayout />
+      </GestureHandlerRootView>
+    </UserInactivityProvider>
   );
 };
 
