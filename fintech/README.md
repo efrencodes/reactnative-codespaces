@@ -25,3 +25,13 @@ yarn add react-native-confirmation-code-field
 ### Install expo-blur
 
 npm i expo-blur
+
+### Install zustand
+
+yarn add zustand
+
+### Install react-native-mmkv
+
+npx expo install react-native-mmkv
+npx expo prebuild
+
