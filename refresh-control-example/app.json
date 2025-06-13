@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "refresh-control-example",
+    "slug": "refresh-control-example",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.efrencodes.refreshcontrolexample"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.efrencodes.refreshcontrolexample"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
